@@ -14,12 +14,12 @@ import java.security.GeneralSecurityException;
 import java.util.List;
 
 public class ChannelDetail {
+    private static ChannelTO channelTO;
     private static final String API_KEY = "AIzaSyCPMPX1SghBqDcvBFxkRd0hPkQ74ZoE_rM";
 
-    public static void printDetails() {
+    public static ChannelTO getChannelTO(String channelId) {
         try {
             YouTube youTubeService = createYouTubeService();
-            String channelId = "UCn0XmAUFv6d2tofMFEesSNw"; // Replace with the desired YouTube channel ID
 
             // Fetch channel details
             ChannelListResponse channelListResponse = youTubeService.channels()
@@ -32,16 +32,23 @@ public class ChannelDetail {
             if (channels != null && !channels.isEmpty()) {
                 Channel channel = channels.get(0);
 
-                System.out.println("Channel Title: " + channel.getSnippet().getTitle());
-                System.out.println("Channel Description: " + channel.getSnippet().getDescription());
-                System.out.println("Channel Subscribers: " + channel.getStatistics().getSubscriberCount());
-                // You can access other channel details in a similar manner
-            } else {
-                System.out.println("Channel not found!");
+                channelTO = new ChannelTO();
+                channelTO.setChannelId(channelId);
+                channelTO.setTitle(channel.getSnippet().getTitle());
+                channelTO.setSubscribers(String.valueOf(channel.getStatistics().getSubscriberCount()));
+                channelTO.setPublishedAt(String.valueOf(channel.getSnippet().getPublishedAt()));
+                channelTO.setCustomURL(channel.getSnippet().getCustomUrl());
+                channelTO.setCountry(channel.getSnippet().getCountry());
+                channelTO.setVideoCount(String.valueOf(channel.getStatistics().getVideoCount()));
+                channelTO.setViewCount(String.valueOf(channel.getStatistics().getViewCount()));
+                channelTO.setDescription(channel.getSnippet().getDescription());
+
+                return channelTO;
             }
         } catch (IOException | GeneralSecurityException e) {
             e.printStackTrace();
         }
+        return null;
     }
 
     private static YouTube createYouTubeService() throws GeneralSecurityException, IOException {
