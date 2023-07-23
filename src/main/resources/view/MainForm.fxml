@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="650.0" prefWidth="840.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.youtubechannel.controller.MainFormController">
+   <children>
+      <ImageView fitHeight="650.0" fitWidth="840.0" pickOnBounds="true">
+         <image>
+            <Image url="@../images/bg.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="92.0" layoutY="146.0" prefHeight="25.0" prefWidth="225.0" text="Enter YouTube Channel ID : ">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtChannelId" layoutX="313.0" layoutY="145.0" onAction="#txtChannelIdOnAction" prefHeight="28.0" prefWidth="315.0" style="-fx-background-color: #dcdcdc;" text="yuhlfkejmfwbejkhflkejv.njsv">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <Label layoutX="92.0" layoutY="184.0" prefHeight="25.0" prefWidth="225.0" text="Channel Title                      : ">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="92.0" layoutY="220.0" prefHeight="25.0" prefWidth="225.0" text="Subscribers                        : ">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="92.0" layoutY="261.0" prefHeight="25.0" prefWidth="225.0" text="Published At                       : ">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="91.0" layoutY="301.0" prefHeight="25.0" prefWidth="225.0" text="Custom URL                        : ">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="92.0" layoutY="338.0" prefHeight="25.0" prefWidth="225.0" text="Country                              : ">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="92.0" layoutY="378.0" prefHeight="25.0" prefWidth="225.0" text="Video Count                       : ">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="92.0" layoutY="414.0" prefHeight="25.0" prefWidth="225.0" text="View Count                         : ">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="92.0" layoutY="452.0" prefHeight="25.0" prefWidth="225.0" text="Description                         : ">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblDescription" alignment="TOP_LEFT" contentDisplay="TOP" layoutX="315.0" layoutY="452.0" prefHeight="156.0" prefWidth="443.0" style="-fx-background-color: none;" text="Sirasa TV has been at the forefront in the industry, catering to all three languages whilst being the pioneers in reality television shows, franchise television shows and daily soaps to Sri Lanka. Equipped with state-of-the-art audio-visual receiving and transmitting the equipment our signals are beamed, free-to-air across the country.   #SirasaTV #ThePeoplesChannel #lka " wrapText="true">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblTitle" layoutX="314.0" layoutY="184.0" prefHeight="25.0" prefWidth="444.0" text="Sirasa TV">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblSubscribers" layoutX="314.0" layoutY="223.0" prefHeight="25.0" prefWidth="430.0" text="23800000">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblPublishedAt" layoutX="314.0" layoutY="263.0" prefHeight="25.0" prefWidth="439.0" text="2011-12-22T12:20:09.000Z">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblCustomURL" layoutX="314.0" layoutY="304.0" prefHeight="25.0" prefWidth="444.0" text="\@sirasaofficial">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblCountry" layoutX="314.0" layoutY="340.0" prefHeight="25.0" prefWidth="444.0" text="LK">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblVideoCount" layoutX="314.0" layoutY="379.0" prefHeight="25.0" prefWidth="445.0" text="723548">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblViewCount" layoutX="314.0" layoutY="415.0" prefHeight="25.0" prefWidth="443.0" text="287444">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

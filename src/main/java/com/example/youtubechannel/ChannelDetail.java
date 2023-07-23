@@ -1,5 +1,6 @@
 package com.example.youtubechannel;
 
+import com.example.youtubechannel.to.ChannelTO;
 import com.google.api.client.http.HttpTransport;
 import com.google.api.client.http.javanet.NetHttpTransport;
 import com.google.api.client.json.JsonFactory;
@@ -30,6 +31,7 @@ public class ChannelDetail {
             List<Channel> channels = channelListResponse.getItems();
             if (channels != null && !channels.isEmpty()) {
                 Channel channel = channels.get(0);
+
                 System.out.println("Channel Title: " + channel.getSnippet().getTitle());
                 System.out.println("Channel Description: " + channel.getSnippet().getDescription());
                 System.out.println("Channel Subscribers: " + channel.getStatistics().getSubscriberCount());
@@ -50,4 +52,5 @@ public class ChannelDetail {
                 .build();
         return youTubeChannelDetails;
     }
+
 }
