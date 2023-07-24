@@ -14,8 +14,8 @@ public class AppInitializer extends Application {
     @Override
     public void start(Stage stage) throws Exception {
         stage.setScene(new Scene(FXMLLoader
-                .load(getClass().getResource("/view/MainForm.fxml"))));
-        stage.setTitle("YouTube Channel Details");
+                .load(getClass().getResource("/view/WelcomeForm.fxml"))));
+        stage.setTitle("YouTube Channel Detail");
         stage.show();
     }
 }

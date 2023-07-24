@@ -8,12 +8,15 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.AnchorPane;
 
 import javax.swing.*;
 import java.net.URL;
 import java.util.ResourceBundle;
 
 public class MainFormController implements Initializable {
+    @FXML
+    private AnchorPane context;
 
     @FXML
     private Label lblCountry;
